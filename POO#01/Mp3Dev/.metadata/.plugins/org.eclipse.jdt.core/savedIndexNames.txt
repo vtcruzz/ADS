@@ -1,0 +1,4 @@
+INDEX VERSION 1.132+C:\Users\Benedito\Desktop\vitorinha\programacao\LIÇÃO\.metadata\.plugins\org.eclipse.jdt.core
+1385171874.index
+1312107400.index
+1865797976.index

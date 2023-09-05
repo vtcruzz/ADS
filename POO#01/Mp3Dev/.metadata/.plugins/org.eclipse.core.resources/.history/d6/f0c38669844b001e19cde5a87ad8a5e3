@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Mp3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Informe a capacidade da playlist: ");
+        int capacidade = scanner.nextInt();
+        scanner.nextLine(); // Consumir a quebra de linha
+
+        Playlist playlist = new Playlist(capacidade);
+
+        while (true) {
+            System.out.println("\nEscolha uma opção:");
+            System.out.println("1. Adicionar música");
+            System.out.println("2. Listar músicas");
+            System.out.println("3. Sair");
+
+            int escolha = scanner.nextInt();
+            scanner.nextLine(); // Consumir a quebra de linha
+
+            switch (escolha) {
+                case 1:
+                    System.out.print("Informe o nome da música: ");
+                    String nomeMusica = scanner.nextLine();
+                    playlist.adicionarMusica(nomeMusica);
+                    break;
+                case 2:
+                    playlist.listarMusicas();
+                    break;
+                case 3:
+                    System.out.println("Saindo do programa.");
+                    scanner.close();
+                    System.exit(0);
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+        }
+    }
+}
+
